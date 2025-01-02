@@ -1,8 +1,16 @@
+"use client";
+
+import { useEffect } from "react";
 import Navbar from "../app/components/Navbar";
 import Hero from "../app/components/Hero";
-import About from "../app/components/About";
+import About from "../app/pages/About";
 
 export default function Home() {
+  useEffect(() => {
+    // Réinitialiser la position de défilement au chargement de la page
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <main>
       <Navbar />

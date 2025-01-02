@@ -1,62 +1,113 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faCircleInfo,
+  faDiagramProject,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-      };
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 580);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <>
       <a href="#hero" className={`top-logo ${isScrolled ? "scrolled-logo" : ""}`}>
-        {!isScrolled ? (
-          <span className="word">
-            {"Luca".split("").map((letter, index) => (
-              <span key={index} className="letter">
-                {letter}
-              </span>
-            ))}
-          </span>
-        ) : (
+        {isSmallScreen ? (
           <span className="short-logo">LL</span>
-        )}
-        {!isScrolled && (
-          <>
-            <span className="space"></span>
+        ) : (
+          <span className="full-logo">
             <span className="word">
-              {"Lelaurain".split("").map((letter, index) => (
-                <span key={index} className="letter">
+              {"Luca".split("").map((letter, index) => (
+                <span
+                  key={index}
+                  className="letter falling-letter"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
                   {letter}
                 </span>
               ))}
             </span>
-          </>
+            <span className="space"></span>
+            <span className="word">
+              {"Lelaurain".split("").map((letter, index) => (
+                <span
+                  key={index}
+                  className="letter falling-letter"
+                  style={{ animationDelay: `${(index + 4) * 0.2}s` }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </span>
+          </span>
         )}
       </a>
 
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <ul className="nav-links">
-          <li>
-            <a href="#hero">Accueil</a>
-          </li>
-          <li>
-            <a href="#about">À propos</a>
-          </li>
-          <li>
-            <a href="#projets">Projets</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
+          {isSmallScreen ? (
+            <>
+              <li>
+                <a href="#hero" aria-label="Accueil">
+                  <FontAwesomeIcon icon={faHouse} className="icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#about" aria-label="À propos">
+                  <FontAwesomeIcon icon={faCircleInfo} className="icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#projets" aria-label="Projets">
+                  <FontAwesomeIcon icon={faDiagramProject} className="icon" />
+                </a>
+              </li>
+              <li>
+                <a href="#contact" aria-label="Contact">
+                  <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                </a>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <a href="#hero">Accueil</a>
+              </li>
+              <li>
+                <a href="#about">À propos</a>
+              </li>
+              <li>
+                <a href="#projets">Projets</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </>
