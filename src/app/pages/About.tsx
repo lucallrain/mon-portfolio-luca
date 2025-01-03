@@ -134,7 +134,13 @@ const About: React.FC = () => {
           {technologies.map((tech, index) => (
             <a key={index} href={tech.link} target="_blank" rel="noopener noreferrer">
               <div className="scroll-item" data-alt={tech.alt}>
-                <Image src={tech.src} alt="" width={200} height={200} />
+                <Image
+                  src={tech.src}
+                  alt={tech.alt}
+                  width={200}
+                  height={200}
+                  priority={index === 0} // Priorité à la première image
+                />
               </div>
             </a>
           ))}

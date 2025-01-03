@@ -277,6 +277,150 @@ body {
   background: #a0a0a0;
 }
 
+/* Section Projects */
+.projects {
+  @apply flex flex-col items-center text-center;
+  padding: 80px 20px;
+  background: #ffffff;
+  gap: 40px;
+}
+
+.projects-title {
+  @apply text-5xl font-bold text-gray-800;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px; /* Ajout d'espacement supplémentaire */
+}
+
+.project-card {
+  @apply p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  border: 2px solid #006400; /* Ajout temporaire pour visualiser */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.project-description {
+  @apply text-gray-600;
+}
+
+.project-language {
+  @apply text-sm text-gray-500 italic;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  gap: 40px; /* Espacement entre les cartes */
+  max-width: 1800px; /* Augmentez la largeur de la grille */
+  margin: 0 auto; /* Centre la grille */
+  padding: 20px;
+}
+
+.project-card {
+  background: #f7f7f7;
+  border-radius: 16px; /* Coins arrondis plus larges */
+  padding: 30px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 500px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.iframe-wrapper {
+  width: 100%;
+  height: 300px; /* Ajustez la hauteur selon vos besoins */
+  border-radius: 12px; /* Coins arrondis */
+  position: relative;
+  background: #f7f7f7; /* Fond neutre pour éviter le vide */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.project-preview {
+  width: 100%;
+  height: 100%; /* Occupe toute la hauteur */
+  border-radius: 8px;
+}
+
+.project-title {
+  font-size: 1.8rem; /* Plus grand pour un meilleur focus */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 15px 0;
+}
+
+.project-language {
+  font-size: 1rem;
+  font-style: italic;
+  color: #999;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.project-link {
+  color: #006400;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-preview::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre */
+  height: 8px; /* Hauteur de la barre */
+}
+
+.project-link:hover {
+  color: #004d00;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+  }
+
+  .project-card {
+    height: auto; /* Ajuste automatiquement la hauteur */
+  }
+
+  .iframe-wrapper {
+    height: 200px; /* Réduit la hauteur de la prévisualisation */
+  }
+}
+
 /*************** Animations ***************/
 @keyframes fadeIn {
   from {
