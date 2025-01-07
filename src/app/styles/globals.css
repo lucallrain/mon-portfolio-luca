@@ -18,14 +18,15 @@ body {
   width: 100%;
 }
 
+/* ================= Section Styles ================= */
 .section {
-  @apply w-full min-h-screen flex flex-col justify-center items-center;
+  @apply w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-12;
   width: 100%;
 }
 
 /* ================= Reusable Classes ================= */
 .btn-primary {
-  @apply inline-block px-8 py-4 bg-primary text-white font-medium rounded-full shadow-lg;
+  @apply inline-block px-6 py-3 text-lg sm:text-xl md:px-8 md:py-4 bg-primary text-white font-medium rounded-full shadow-lg;
   @apply transition-transform transform hover:scale-110 hover:bg-gradient-to-br hover:from-primary hover:to-primaryDark;
 }
 
@@ -67,7 +68,7 @@ body {
 
 /* ================= Logo Animation ================= */
 .top-logo {
-  @apply fixed top-8 left-1/2 transform -translate-x-1/2 text-5xl md:text-6xl font-bold;
+  @apply fixed top-8 left-1/2 transform -translate-x-1/2 text-5xl sm:text-6xl font-bold;
   display: flex;
   align-items: center;
   z-index: 50;
@@ -166,13 +167,13 @@ body {
 }
 
 .hero-title {
-  @apply text-5xl md:text-7xl font-bold;
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold;
   color: black;
   animation: fadeInScale 1.5s ease-in-out forwards;
 }
 
 .hero-subtitle {
-  @apply text-lg md:text-2xl text-gray-700;
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700;
   animation: fadeInScale 2s ease-in-out forwards;
   animation-delay: 0.5s;
 }
@@ -297,16 +298,16 @@ body {
 
 .projects-grid {
   @apply grid gap-8 max-w-7xl w-full px-4;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .preview-wrapper {
   @apply w-full mb-4;
-  height: 180px; /* Hauteur fixe pour toutes les images */
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Masque les débordements */
+  overflow: hidden;
 }
 
 .project-iframe,
@@ -318,10 +319,10 @@ body {
 }
 
 .project-image {
-  width: auto; /* Garde les proportions naturelles */
-  height: 100%; /* Remplit la hauteur du conteneur */
-  object-fit: contain; /* S'assure que l'image complète est visible */
-  border-radius: 8px; /* Ajoute des bords arrondis pour le design */
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .project-title {
@@ -338,6 +339,7 @@ body {
   @apply text-sm text-gray-700 font-medium;
   margin-bottom: 16px;
 }
+
 .project-links {
   @apply flex gap-4 mt-auto;
 }
@@ -351,6 +353,8 @@ body {
   transform: scale(1.1);
   color: #004d00;
 }
+
+/* ================= Contact Section ================= */
 .contact-section {
   @apply flex flex-col items-center justify-center bg-gray-50 min-h-screen;
   width: 100%;
@@ -429,4 +433,25 @@ body {
 
 .form-submit {
   @apply w-full bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition;
+}
+
+/* ================= Media Queries ================= */
+
+/* Mobile-first styles */
+@media (max-width: 768px) {
+  .hero-title {
+    @apply text-4xl;
+  }
+
+  .hero-subtitle {
+    @apply text-base;
+  }
+
+  .projects-grid {
+    @apply grid-cols-1;
+  }
+
+  .project-card {
+    @apply w-full;
+  }
 }
