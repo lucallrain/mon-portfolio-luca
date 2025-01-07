@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
           </div>
 
           <form className="contact-form" onSubmit={handleFormSubmit}>
-            <h3 className="form-title">Ou laissez-moi un message :</h3>
+            <h3 className="form-title">Besoin de me joindre ?</h3>
             <div className="form-group">
               <label htmlFor="name" className="form-label">
                 Nom

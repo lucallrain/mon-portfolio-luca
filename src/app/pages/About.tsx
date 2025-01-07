@@ -55,7 +55,7 @@ const About: React.FC = () => {
   Mon objectif principal est de transformer vos idées en des projets uniques, tout en assurant un SEO optimal pour une meilleure visibilité en ligne. Chaque projet est pour moi une opportunité pour explorer de nouvelles approches et de repousser les limites de la créativité.
 </p>
 <p className="about-description-responsive">
-  Je suis Luca, développeur ! mais on manque de place pour tout expliquer, faut me lire sur un écran plus grand !
+  Je suis Luca, développeur ! mais on manque de place pour tout expliquer, purriez-vous me lire sur un plus grand écran ?
 </p>
 
         <div className="carousel-container">
