@@ -46,14 +46,18 @@ const About: React.FC = () => {
       <div className="about-content">
         <h2 className="about-title">À propos de moi</h2>
         <p className="about-description">
-          Salut ! Je suis Luca Lelaurain, un développeur passionné par le monde du web. Je veux concevoir des sites web intuitifs, fonctionnels et attractifs, avec une attention particulière portée au design et optimiser le parcours utilisateur.
-        </p>
-        <p className="about-description">
-          Spécialisé dans le développement front-end, je maîtrise une variété de technologies modernes comme React, Tailwind CSS, et Next.js. Je dispose également de solides bases en back-end, ce qui me permet de travailler sur des projets full-stack lorsque nécessaire.
-        </p>
-        <p className="about-description">
-          Mon objectif principal est de transformer vos idées en des projets uniques, tout en assurant un SEO optimal pour une meilleure visibilité en ligne. Chaque projet est pour moi une opportunité  pour explorer de nouvelles approches et de repousser les limites de la créativité.
-        </p>
+  Salut ! Je suis Luca Lelaurain, un développeur passionné par le monde du web. Je veux concevoir des sites web intuitifs, fonctionnels et attractifs, avec une attention particulière portée au design et optimiser le parcours utilisateur.
+</p>
+<p className="about-description">
+  Spécialisé dans le développement front-end, je maîtrise une variété de technologies modernes comme React, Tailwind CSS, et Next.js. Je dispose également de solides bases en back-end, ce qui me permet de travailler sur des projets full-stack lorsque nécessaire.
+</p>
+<p className="about-description">
+  Mon objectif principal est de transformer vos idées en des projets uniques, tout en assurant un SEO optimal pour une meilleure visibilité en ligne. Chaque projet est pour moi une opportunité pour explorer de nouvelles approches et de repousser les limites de la créativité.
+</p>
+<p className="about-description-responsive">
+  Je suis Luca, développeur ! mais on manque de place pour tout expliquer, faut me lire sur un écran plus grand !
+</p>
+
         <div className="carousel-container">
           <button className="carousel-button left" onClick={scrollLeft}>
             <FaChevronLeft />
