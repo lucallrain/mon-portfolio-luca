@@ -5,7 +5,7 @@ import React from "react";
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="hero">
-      <div className="hero-content animate-visible">
+      <div className="hero-content">
         <h1 className="hero-title">Bienvenue sur mon portfolio</h1>
         <p className="hero-subtitle">
           Développeur/Intégrateur web passionné par le design et spécialisé dans

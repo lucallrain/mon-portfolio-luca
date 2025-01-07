@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#projets" aria-label="Projets">
+                <a href="#projects" aria-label="Projets">
                   <FontAwesomeIcon icon={faDiagramProject} className="icon" />
                 </a>
               </li>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
                 <a href="#about">À propos</a>
               </li>
               <li>
-                <a href="#projets">Projets</a>
+                <a href="#projects">Projets</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
