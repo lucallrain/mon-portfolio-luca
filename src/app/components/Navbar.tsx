@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <header className={`header ${isScrolled ? "scrolled-header" : ""}`}>
       <a href="#hero" className={`top-logo ${isScrolled ? "scrolled-logo" : ""}`}>
         {isSmallScreen ? (
           <span className="short-logo">LL</span>
@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
           )}
         </ul>
       </nav>
-    </>
+    </header>
   );
 };
 

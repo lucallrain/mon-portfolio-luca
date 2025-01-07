@@ -68,7 +68,7 @@ body {
 
 /* ================= Logo Animation ================= */
 .top-logo {
-  @apply fixed top-8 left-1/2 transform -translate-x-1/2 text-5xl sm:text-6xl font-bold;
+  @apply fixed top-8 left-1/2 transform -translate-x-1/2 text-4xl sm:text-5xl font-bold;
   display: flex;
   align-items: center;
   z-index: 50;
@@ -123,8 +123,8 @@ body {
 
 /* ================= Navbar ================= */
 .navbar {
-  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 w-9/12 max-w-lg bg-white bg-opacity-90 rounded-3xl backdrop-blur-lg z-50;
-  @apply p-6 h-16 shadow-lg;
+  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 w-9/12 max-w-lg bg-white bg-opacity-90 rounded-xl backdrop-blur-lg z-50;
+  @apply p-4 h-14 shadow-lg;
   transition: all 0.3s ease-in-out;
 }
 
