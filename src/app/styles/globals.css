@@ -175,7 +175,7 @@ body {
 }
 
 .hero-content {
-  @apply max-w-[60vh] mx-auto space-y-[4vh] p-[4vh] rounded-lg bg-gray-100 shadow-lg;
+  @apply mx-auto space-y-[4vh] p-[4vh] rounded-lg bg-gray-100 shadow-lg;
 }
 
 .hero-title {
