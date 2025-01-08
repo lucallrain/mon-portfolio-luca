@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     };
 
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 580);
+      setIsSmallScreen(window.innerWidth <= 1040);
     };
 
     window.addEventListener("scroll", handleScroll);

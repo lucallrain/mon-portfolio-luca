@@ -20,7 +20,7 @@ body {
 
 /* ================= Section Styles ================= */
 .section {
-  @apply w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 md:px-12;
+  @apply w-full  flex flex-col justify-center items-center px-4 sm:px-8 md:px-12;
   width: 100%;
 }
 
@@ -68,15 +68,14 @@ body {
 
 /* ================= Logo Animation ================= */
 .top-logo {
-  @apply fixed top-8 left-1/2 transform -translate-x-1/2 text-4xl sm:text-5xl font-bold;
+  @apply fixed top-[2vh] left-1/2 transform -translate-x-1/2 text-[4vh] sm:text-[5vh] font-bold;
   display: flex;
   align-items: center;
   z-index: 50;
   transition: all 0.6s ease-in-out;
 }
-
 .top-logo.scrolled-logo {
-  @apply text-2xl fixed top-4 left-4 transform-none;
+  @apply text-[2vh] fixed top-[1vh] left-[1vh] transform-none;
   gap: 0;
   opacity: 1;
   transition: all 0.6s ease-in-out;
@@ -123,8 +122,8 @@ body {
 
 /* ================= Navbar ================= */
 .navbar {
-  @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 w-9/12 max-w-lg bg-white bg-opacity-90 rounded-xl backdrop-blur-lg z-50;
-  @apply p-4 h-14 shadow-lg;
+  @apply fixed bottom-[2vh] left-1/2 transform -translate-x-1/2 w-[75%] max-w-[50vh] bg-white bg-opacity-90 rounded-xl backdrop-blur-lg z-50;
+  @apply p-[2%]  shadow-lg;
   transition: all 0.3s ease-in-out;
 }
 
@@ -134,6 +133,11 @@ body {
 
 .nav-links {
   @apply flex justify-evenly items-center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
 .nav-links li a {
@@ -147,7 +151,7 @@ body {
 }
 
 .icon {
-  @apply w-6 h-6 text-black;
+  @apply w-[3vh] h-[3vh] text-black;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -156,52 +160,78 @@ body {
   color: #006400;
 }
 
+.ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
 /* ================= Hero Section ================= */
 .hero {
-  @apply min-h-screen flex justify-center items-center text-center bg-white px-4;
+  @apply flex justify-center items-center text-center bg-white px-[2%];
   animation: fadeIn 1.5s ease-in-out;
+  height: 100vh;
 }
 
 .hero-content {
-  @apply max-w-3xl mx-auto space-y-8 p-8 rounded-lg bg-gray-100 shadow-lg;
+  @apply max-w-[60vh] mx-auto space-y-[4vh] p-[4vh] rounded-lg bg-gray-100 shadow-lg;
 }
 
 .hero-title {
-  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold;
-  color: black;
-  animation: fadeInScale 1.5s ease-in-out forwards;
+  @apply text-[4vh] sm:text-[5vh] md:text-[6vh] lg:text-[7vh] font-bold;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
-  @apply text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700;
-  animation: fadeInScale 2s ease-in-out forwards;
-  animation-delay: 0.5s;
+  @apply text-[2vh] sm:text-[2.5vh] md:text-[3vh] lg:text-[3.5vh] text-gray-700;
+  margin-bottom: 1rem;
 }
 
 .hero-cta {
   @apply btn-primary;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    @apply flex justify-center items-center text-center bg-white px-[2%];
+    height: 60vh;
+  }
+
+  .hero-content {
+    @apply space-y-[2vh];
+    padding: 16px;
+  }
+
+  .hero-title {
+    @apply text-[3vh];
+  }
+
+  .hero-subtitle {
+    @apply text-[1.5vh];
+  }
+}
+
 /* ================= About Section ================= */
 .about {
-  @apply flex flex-col justify-center items-center text-center bg-gray-50 gap-10 w-full min-h-screen;
+  @apply flex flex-col items-center text-center bg-gray-50 gap-10 w-full;
   overflow: hidden; /* Évite les débordements horizontaux */
-  padding: 20px;
+  height: 80vh;
 }
 
 .about-content {
   @apply max-w-4xl mx-auto flex flex-col items-center gap-6;
   width: 100%;
   text-align: center;
+  margin-top: 8vh;
 }
 
 .about-title {
-  @apply text-4xl font-bold text-gray-800;
+  @apply text-6xl font-bold text-gray-800;
   background: linear-gradient(to right, #006400, #004d00);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
 }
 
 .about-description {
@@ -279,16 +309,16 @@ body {
 @media (max-width: 768px) {
   .about {
     gap: 6px;
-    padding: 16px;
+    height: 50vh;
   }
 
   .about-content {
-    gap: 4px;
+    gap: 10px;
   }
 
   .about-title {
-    font-size: 1.5rem;
-    line-height: 1.2;
+    font-size: 2rem;
+    line-height: 1.1;
   }
 
   .about-description {
