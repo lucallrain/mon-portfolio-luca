@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState("");
@@ -28,25 +29,21 @@ const Contact: React.FC = () => {
 
   const handleFormSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("/.netlify/functions/save-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      
+      await emailjs.send(
+        "service_3v00wup", // Remplacez par votre service ID EmailJS
+        "template_txyq034", // Remplacez par votre template ID EmailJS
+        formData,
+        "BBS5xGj3dcznOkGEN" // Remplacez par votre user ID EmailJS
+      );
 
-      if (response.ok) {
-        setFormStatus("Votre message a été envoyé avec succès !");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        const errorResponse = await response.json();
-        setFormStatus(`Erreur : ${errorResponse.message || "Veuillez réessayer."}`);
-      }
+      setFormStatus("Votre message a été envoyé avec succès !");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Erreur lors de la soumission :", error);
+      console.error("Erreur lors de l'envoi de l'email:", error);
       setFormStatus("Une erreur est survenue. Veuillez réessayer plus tard.");
     }
   };
