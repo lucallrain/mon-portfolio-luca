@@ -31,7 +31,7 @@ const projects = [
     description: "Un quiz interactif pour tester vos connaissances sur les Pokémon.",
     language: "JavaScript",
     codeUrl: "https://github.com/lucallrain/quizz_pokemon",
-    liveUrl: "https://lucallrain.github.io/quizz_pokemon/",
+    liveUrl: "https://lucallrain.github.io/P5.5_Pokemon/",
     image: quizzPokemonImg,
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     description: "Site vitrine pour une photographe professionnelle.",
     language: "HTML et CSS",
     codeUrl: "https://github.com/lucallrain/Nina-Carducci",
-    liveUrl: "https://lucallrain.github.io/Nina-Carducci/",
+    liveUrl: "https://lucallrain.github.io/NinaCarducci/",
     image: ninaCarducciImg,
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     description: "Plateforme pour gérer et promouvoir des événements.",
     language: "HTML, CSS et JavaScript",
     codeUrl: "https://github.com/lucallrain/724events",
-    liveUrl: "https://lucallrain.github.io/724events/",
+    liveUrl: "https://projet9byluca.netlify.app/",
     image: eventsImg,
   },
   {
@@ -55,7 +55,7 @@ const projects = [
     description: "Application de location immobilière avec filtres avancés.",
     language: "React",
     codeUrl: "https://github.com/lucallrain/Kasa",
-    liveUrl: "https://lucallrain.github.io/Kasa/",
+    liveUrl: "https://projetkasabyluca.netlify.app/",
     image: kasaImg,
   },
 ];
