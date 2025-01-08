@@ -378,7 +378,7 @@ body {
 }
 
 .projects-title {
-  @apply text-5xl font-bold text-gray-800;
+  @apply text-4xl font-bold text-gray-800;
   background: linear-gradient(to right, #006400, #004d00);
   -webkit-background-clip: text;
   background-clip: text;
@@ -476,7 +476,7 @@ body {
 }
 
 .contact-title {
-  @apply text-5xl font-bold text-gray-800 mb-8;
+  @apply text-4xl font-bold text-gray-800 mb-8;
   background: linear-gradient(to right, #006400, #004d00);
   -webkit-background-clip: text;
   background-clip: text;

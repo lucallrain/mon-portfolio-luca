@@ -107,7 +107,7 @@ const About: React.FC = () => {
         </p>
         <p className="about-description-responsive">
           Je suis Luca, développeur ! mais on manque de place pour tout
-          expliquer, purriez-vous me lire sur un plus grand écran ?
+          expliquer, pourriez-vous me lire sur un plus grand écran ?
         </p>
         <div className="carousel-container">
           <button className="carousel-button left" onClick={scrollLeft}>
