@@ -31,11 +31,12 @@ const Contact: React.FC = () => {
     if (!validateForm()) return;
 
     try {
-      const response = await fetch("http://localhost:5000/save-message", {
+      const response = await fetch("/.netlify/functions/save-message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+      
 
       if (response.ok) {
         setFormStatus("Votre message a été envoyé avec succès !");
