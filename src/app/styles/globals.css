@@ -254,6 +254,8 @@ body {
 
 .scroll-container {
   display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
   gap: 15px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -267,13 +269,13 @@ body {
 
 .scroll-item {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu interne */
+  justify-content: center; /* Centre horizontalement le contenu interne */
   width: 160px;
   height: 160px;
   background: #f0f0f0;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: scale(0.9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -281,7 +283,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .scroll-item:hover {
   transform: scale(0.95);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
@@ -359,11 +360,11 @@ body {
 
 @media (min-width: 769px) {
   .about-description {
-    display: block;
+    display: none;
   }
 
   .about-description-responsive {
-    display: none;
+    display: block;
   }
 
   .carousel-container {
