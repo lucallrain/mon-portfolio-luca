@@ -18,6 +18,9 @@ body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* ================= Section Styles ================= */
 .section {
   @apply w-full  flex flex-col justify-center items-center px-4 sm:px-8 md:px-12;
@@ -216,7 +219,7 @@ body {
 .about {
   @apply flex flex-col items-center text-center bg-gray-50 gap-10 w-full;
   overflow: hidden; /* Évite les débordements horizontaux */
-  height: 80vh;
+  height: 90vh;
 }
 
 .about-content {

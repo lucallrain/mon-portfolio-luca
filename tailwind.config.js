@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: '#006400',
         primaryDark: '#004d00',
+        scrollBehavior: ['smooth'],
       },
     },
   },
