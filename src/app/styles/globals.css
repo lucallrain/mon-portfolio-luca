@@ -162,6 +162,8 @@ html {
 }
 .about-description {
   @apply text-base text-gray-600 leading-relaxed;
+  display: flex;
+  flex-direction: row;
 }
 .about-description-responsive {
   display: none;
@@ -483,7 +485,7 @@ html {
     padding: 6px;
   }
 }
-@media (min-width: 769px) {
+@media (max-width: 1040px) {
   .about-description {
     display: none;
   }
