@@ -10,7 +10,6 @@ import jsLogo from '../assets/logos/javascript.svg';
 import reactLogo from '../assets/logos/react.svg';
 import nodejsLogo from '../assets/logos/nodejs.svg';
 import phpLogo from '../assets/logos/php.svg';
-import pythonLogo from '../assets/logos/python.svg';
 import tailwindLogo from '../assets/logos/tailwind.svg';
 import mongodbLogo from '../assets/logos/mongodb.svg';
 import typescriptLogo from '../assets/logos/typescript.svg';
@@ -35,7 +34,6 @@ const technologies = [
   { src: reactLogo, alt: 'React', link: 'https://reactjs.org/' },
   { src: nodejsLogo, alt: 'Node.js', link: 'https://nodejs.org/' },
   { src: phpLogo, alt: 'PHP', link: 'https://www.php.net/' },
-  { src: pythonLogo, alt: 'Python', link: 'https://www.python.org/' },
   { src: tailwindLogo, alt: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
   { src: mongodbLogo, alt: 'MongoDB', link: 'https://www.mongodb.com/' },
   {
@@ -49,13 +47,13 @@ const technologies = [
 const About: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const cloneItems = [...technologies, ...technologies, ...technologies]; // Cloner les éléments pour un effet infini.
+  const cloneItems = [...technologies, ...technologies, ...technologies]; 
 
   const handleScroll = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const scrollWidth = container.scrollWidth / 3; // Largeur du contenu original
+    const scrollWidth = container.scrollWidth / 3; 
     if (container.scrollLeft >= scrollWidth * 2) {
       container.scrollLeft -= scrollWidth;
     } else if (container.scrollLeft <= 0) {
@@ -75,7 +73,7 @@ const About: React.FC = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    container.scrollLeft = container.scrollWidth / 3; // Commence au milieu pour l'effet infini.
+    container.scrollLeft = container.scrollWidth / 3; 
     container.addEventListener('scroll', handleScroll);
 
     return () => {

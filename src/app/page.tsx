@@ -5,7 +5,7 @@ import Navbar from "../app/components/Navbar";
 import Hero from "../app/components/Hero";
 import About from "../app/pages/About";
 import Projects from "../app/pages/Projects";
-import Contact from "../app/pages/Contact"; // Assurez-vous que l'import pointe bien vers la bonne localisation
+import Contact from "../app/pages/Contact"; 
 
 export default function Home() {
   return (
