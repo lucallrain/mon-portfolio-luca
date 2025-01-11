@@ -34,10 +34,10 @@ const Contact: React.FC = () => {
 
     try {
       await emailjs.send(
-        "service_3v00wup", 
-        "template_txyq034", 
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         formData,
-        "BBS5xGj3dcznOkGEN" 
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID || ""
       );
 
       setFormStatus("Votre message a été envoyé avec succès !");
